@@ -1,0 +1,50 @@
+version: '3'
+services:
+  # PHP
+  php:
+    container_name: harmony_php
+    build: ./.docker/php
+    expose:
+      - 9000
+    volumes:
+      - .:/usr/src/harmony
+      - ~/.ssh/id_rsa:/root/.ssh/id_rsa # Share local machine SSH key to docker
+    links:
+      - db
+    working_dir: /usr/src/harmony
+    networks:
+      - harmony
+  # Nginx
+  nginx:
+    container_name: harmony_nginx
+    image: nginx
+    ports:
+      - 8080:80
+    links:
+      - php
+    volumes:
+      - .:/usr/src/harmony
+      - ./.docker/nginx/harmony.conf:/etc/nginx/conf.d/harmony.conf
+    working_dir: /usr/src/harmony
+    networks:
+      - harmony
+  # MariaDB
+  db:
+    container_name: harmony_db
+    image: mariadb
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: symfony
+      MYSQL_USER: symfony
+      MYSQL_PASSWORD: symfony
+    networks:
+      - harmony
+
+networks:
+  harmony:
+    driver: bridge
+volumes:
+  data:
+    driver: local
