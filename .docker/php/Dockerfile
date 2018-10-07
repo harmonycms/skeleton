@@ -15,7 +15,7 @@ RUN echo "alias mv='mv -i'" >> /root/.bashrc
 RUN apt-get update && apt-get install -y git wget subversion curl zlib1g-dev sqlite3 libsqlite3-dev
 
 # Docker PHP extension install
-RUN docker-php-ext-install pdo_sqlite zip
+RUN docker-php-ext-install pdo_sqlite pdo_mysql zip
 
 # Install Composer and make it available in the PATH
 RUN wget https://getcomposer.org/composer.phar && chmod +x composer.phar && mv composer.phar /usr/local/bin/composer
