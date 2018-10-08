@@ -26,6 +26,8 @@
     "ext-ctype": "*",
     "harmony/admin-bundle": "dev-master",
     "harmony/core-bundle": "dev-master",
+    "harmony/flex": "dev-master",
+    "harmony/sdk": "dev-master",
     "harmony/theme-bundle": "dev-master",
     "liip/theme-bundle": "dev-master",
     "sensio/framework-extra-bundle": "^5.1",
