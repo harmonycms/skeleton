@@ -17,6 +17,9 @@ RUN apt-get update && apt-get install -y git wget subversion curl zlib1g-dev sql
 # Docker PHP extension install
 RUN docker-php-ext-install pdo_sqlite pdo_mysql zip
 
+# install mongodb ext
+RUN pecl install mongodb && docker-php-ext-enable mongodb
+
 # Install Composer and make it available in the PATH
 RUN wget https://getcomposer.org/composer.phar && chmod +x composer.phar && mv composer.phar /usr/local/bin/composer
 
