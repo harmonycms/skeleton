@@ -9,7 +9,6 @@
     "ext-iconv": "*",
     "harmony/core-bundle": "dev-master",
     "harmony/flex": "dev-master",
-    "harmony/sdk": "dev-master",
     "sensio/framework-extra-bundle": "^5.1",
     "symfony/asset": "*",
     "symfony/console": "*",
@@ -87,5 +86,7 @@
       "require": "4.2.*",
       "endpoint": "https://flex.harmonycms.net"
     }
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
