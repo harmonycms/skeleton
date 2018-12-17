@@ -14,7 +14,6 @@
     "symfony/console": "*",
     "symfony/dotenv": "*",
     "symfony/expression-language": "*",
-    "symfony/flex": "^1.1",
     "symfony/form": "*",
     "symfony/framework-bundle": "*",
     "symfony/monolog-bundle": "^3.1",
