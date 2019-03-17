@@ -7,6 +7,10 @@
     {
       "type": "vcs",
       "url": "https://git.harmonycms.net/emulienfou/harmonycms-settings-manager-bundle"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/emulienfou/doctrine-enum-type"
     }
   ],
   "require": {
