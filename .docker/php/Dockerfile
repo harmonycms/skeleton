@@ -20,6 +20,8 @@ RUN docker-php-ext-install pdo_sqlite pdo_mysql zip
 # install mongodb ext
 RUN pecl install mongodb && docker-php-ext-enable mongodb
 
+COPY "memory-limit-php.ini" "/usr/local/etc/php/conf.d/memory-limit-php.ini"
+
 # Install Composer and make it available in the PATH
 RUN wget https://getcomposer.org/composer.phar && chmod +x composer.phar && mv composer.phar /usr/local/bin/composer
 
