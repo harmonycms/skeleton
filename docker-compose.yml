@@ -8,7 +8,6 @@ services:
       - 9000
     volumes:
       - .:/usr/src/harmony
-      - ~/.ssh/id_rsa:/root/.ssh/id_rsa # Share local machine SSH key to docker
     links:
       - mariadb
       - mongodb
