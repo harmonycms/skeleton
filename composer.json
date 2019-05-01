@@ -1,86 +1,86 @@
 {
-  "name": "harmony/skeleton",
-  "type": "project",
-  "license": "LGPL-3.0-or-later",
-  "description": "A skeleton to start a new HarmonyCMS project",
-  "require": {
-    "php": "^7.1.3",
-    "ext-ctype": "*",
-    "ext-iconv": "*",
-    "harmony/core-bundle": "0.1",
-    "harmony/flex": "0.1",
-    "symfony/asset": "*",
-    "symfony/console": "*",
-    "symfony/dotenv": "*",
-    "symfony/expression-language": "*",
-    "symfony/form": "*",
-    "symfony/framework-bundle": "*",
-    "symfony/monolog-bundle": "^3.1",
-    "symfony/process": "*",
-    "symfony/security-bundle": "*",
-    "symfony/serializer-pack": "*",
-    "symfony/swiftmailer-bundle": "^3.1",
-    "symfony/translation": "*",
-    "symfony/twig-bundle": "*",
-    "symfony/validator": "*",
-    "symfony/web-link": "*",
-    "symfony/yaml": "*"
-  },
-  "require-dev": {
-    "symfony/debug-pack": "*",
-    "symfony/dotenv": "*",
-    "symfony/maker-bundle": "^1.0",
-    "symfony/profiler-pack": "*",
-    "symfony/test-pack": "*",
-    "symfony/web-server-bundle": "*"
-  },
-  "config": {
-    "preferred-install": {
-      "*": "dist"
+    "name": "harmony/skeleton",
+    "type": "project",
+    "license": "LGPL-3.0-or-later",
+    "description": "A skeleton to start a new HarmonyCMS project",
+    "require": {
+        "php": "^7.1.3",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "harmony/core-bundle": "dev-master",
+        "harmony/flex": "dev-master",
+        "symfony/asset": "*",
+        "symfony/console": "*",
+        "symfony/dotenv": "*",
+        "symfony/expression-language": "*",
+        "symfony/form": "*",
+        "symfony/framework-bundle": "*",
+        "symfony/monolog-bundle": "^3.1",
+        "symfony/process": "*",
+        "symfony/security-bundle": "*",
+        "symfony/serializer-pack": "*",
+        "symfony/swiftmailer-bundle": "^3.1",
+        "symfony/translation": "*",
+        "symfony/twig-bundle": "*",
+        "symfony/validator": "*",
+        "symfony/web-link": "*",
+        "symfony/yaml": "*"
     },
-    "sort-packages": true
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "App\\Tests\\": "tests/"
-    }
-  },
-  "replace": {
-    "paragonie/random_compat": "2.*",
-    "symfony/polyfill-ctype": "*",
-    "symfony/polyfill-iconv": "*",
-    "symfony/polyfill-php71": "*",
-    "symfony/polyfill-php70": "*",
-    "symfony/polyfill-php56": "*"
-  },
-  "scripts": {
-    "auto-scripts": {
+    "require-dev": {
+        "symfony/debug-pack": "*",
+        "symfony/dotenv": "*",
+        "symfony/maker-bundle": "^1.0",
+        "symfony/profiler-pack": "*",
+        "symfony/test-pack": "*",
+        "symfony/web-server-bundle": "*"
     },
-    "post-install-cmd": [
-      "@auto-scripts"
-    ],
-    "post-update-cmd": [
-      "@auto-scripts"
-    ]
-  },
-  "conflict": {
-    "symfony/symfony": "*"
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
     },
-    "symfony": {
-      "allow-contrib": true,
-      "require": "4.2.*",
-      "endpoint": "https://flex.harmonycms.net"
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "paragonie/random_compat": "2.*",
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "symfony": {
+            "allow-contrib": true,
+            "require": "4.2.*",
+            "endpoint": "https://flex.harmonycms.net"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
