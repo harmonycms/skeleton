@@ -12,7 +12,7 @@ RUN echo "alias cp='cp -i'" >> /root/.bashrc
 RUN echo "alias mv='mv -i'" >> /root/.bashrc
 
 # Install lib dependencies
-RUN apt-get update && apt-get install -y git wget subversion curl zlib1g-dev sqlite3 libsqlite3-dev
+RUN apt-get update && apt-get install -y git wget subversion curl zlib1g-dev sqlite3 libsqlite3-dev unzip
 
 # Docker PHP extension install
 RUN docker-php-ext-install pdo_sqlite pdo_mysql zip
