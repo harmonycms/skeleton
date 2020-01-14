@@ -61,7 +61,7 @@
         "symfony": {
             "allow-contrib": true,
             "require": "5.0.*",
-            "endpoint": "https://harmonycms.net"
+            "endpoint": "https://api.harmonycms.net"
         }
     }
 }
